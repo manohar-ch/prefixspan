@@ -4,7 +4,7 @@ import numpy as np
 import csv
 import xlrd
 
-trans=pd.read_table('C:\Users\chilamku\Desktop\casetitle.txt', header=None,index_col=0)
+trans=pd.read_table('text_file_path', header=None,index_col=0)
 
 def apriori(trans, support=0.01, minlen=1):
     ts=pd.get_dummies(trans.unstack().dropna()).groupby(level=1).sum()
